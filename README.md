@@ -18,6 +18,8 @@ nodemon ./index.js
     res.end(JSON.stringify(req.body))
   },
 ```
+static为静态文件夹
+
 其中GET方法的数据存储在req.query中，POST的数据存储在req.body中
 
 可以通过运行/sample目录下的b.html模拟POST方法，使用JSON格式进行数据传输
