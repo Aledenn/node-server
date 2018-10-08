@@ -1,0 +1,19 @@
+<script>
+let xhr = new XMLHttpRequest()
+// xhr.open('POST','http:/localhost:8080/postData',true)
+xhr.open('POST','http:/localhost:8080/search',true)
+xhr.send(
+    JSON.stringify({username:'lee',password:'hww',
+    age:23})
+)
+xhr.onreadystatechange=() => {
+    console.log(xhr.readyState);    
+}
+function makeUrl(obj) {
+      let arr = []
+      for (let key in obj) {
+        arr.push(key + '=' + obj[key])
+      }
+      return arr.join('&')
+    }
+</script>
